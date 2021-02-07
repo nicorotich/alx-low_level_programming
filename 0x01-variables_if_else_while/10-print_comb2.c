@@ -1,23 +1,30 @@
 #include <stdio.h>
 /**
- *main - entry point
- *Description: prints out all the numbers between 00 and 99
- *Return: 0 success
+ * main- Entry point
+ * Description - print numbers from 00 to 90 seperated by ,
+ * Return: 0 success
  */
 int main(main)
 {
-	int num;
+	int i, j;
 
-	for (num = 0; num < 100; num++)
+	for (i = 48; i < 58; i++)
 	{
-		putchar((num / 10) + '0');
-		putchar((num % 10) + '0');
-		if (num < 99)
+		for (j = 48; j < 58; j++)
 		{
-			putchar(44);
-			putchar(32);
+			putchar(i);
+			putchar(j);
+			if (i == 57 && j == 57)
+			{
+				break;
+			}
+			else
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
-	putchar(10);
+	putchar(\'n');
 	return (0);
 }
