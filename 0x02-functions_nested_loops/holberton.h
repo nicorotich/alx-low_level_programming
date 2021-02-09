@@ -14,7 +14,7 @@ void print_alphabet_x10(void);
 int _islower(int);
 
 /* 4-alpha.c */
-int isalpha(int);
+int _isalpha(int);
 
 /* 5-sign.c */
 int print_sign(int);
