@@ -26,6 +26,6 @@ void reverse_array(int *a, int n)
 	{
 		/* if you have an array of n elements the last element is at n - 1*/
 		swap_int(a + counter, a + (n - counter - 1));
-		counter--;
+		counter++;
 	}
 }
