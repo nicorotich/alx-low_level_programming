@@ -2,23 +2,23 @@
 #include <stdio.h>
 
 /**
- * _strchr - locates a character in a string
- * @s: string to be searched
- * @c: target char
- * Return: pointer to first occurrence of c or NULL if char not found
+ * *_strchr - locates a character in a string
+ * @s: pointer string containing character to be located
+ * @c: byte to be located
+ * Return: pointer to 1st occurrence of c in s, NULL if character not found
  */
 char *_strchr(char *s, char c)
 {
+	unsigned int i;
 
-	while (*s)
+	i = 0;
+	while (s[i] >= '\0')
 	{
-		if (c == *s)
+		if (s[i] == c)
 		{
-			return (s);
+			return (s + i);
 		}
-		s++;
+		i++;
 	}
-	if (!c)
-		return (s);
-	return (NULL);
+	return ('\0');
 }
